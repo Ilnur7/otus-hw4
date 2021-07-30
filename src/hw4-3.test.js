@@ -1,6 +1,4 @@
-import { average , multTable , iterator } from "./hw4-3";
-
-
+import { average, multTable, iterator } from "./hw4-3";
 
 describe("average", () => {
   it("should work correct", () => {
