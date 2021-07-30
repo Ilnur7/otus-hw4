@@ -9,7 +9,7 @@ export function sumSymbols(a, b) {
 export function sumDigitNumber(a) {
   return a
     .toString()
-    .split('')
+    .split("")
     .map(Number)
     .reduce((acc, cur) => acc + cur);
 }
