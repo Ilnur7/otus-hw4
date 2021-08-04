@@ -9,9 +9,20 @@ function hideButton() {
   button.hidden = input.value === "";
 }
 
+function deleteSixthElem() {
+  const paragraphs = document.querySelectorAll(".parent-p p");
+  if (paragraphs.length > 5) {
+    paragraphs[0].parentElement.removeChild(paragraphs[0]);
+    /* const firstChild = document.querySelector('.parent-p p:first-child');
+        firstChild.remove()
+        div.removeChild(firstChild) */
+  }
+}
+
 function buttonClick() {
   const text = getInputText();
   addText(text);
+  deleteSixthElem();
   clearInput();
   button.hidden = true;
 }
@@ -26,14 +37,6 @@ function addText(text) {
 
   const div = document.querySelector(".parent-p");
   div.append(p);
-
-  const paragraphs = document.querySelectorAll(".parent-p p");
-  if (paragraphs.length > 5) {
-    div.removeChild(paragraphs[0]);
-    /* const firstChild = document.querySelector('.parent-p p:first-child');
-        firstChild.remove()
-        div.removeChild(firstChild) */
-  }
 }
 
 function clearInput() {
