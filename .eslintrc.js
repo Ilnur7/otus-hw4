@@ -16,6 +16,7 @@ module.exports = {
     "no-plusplus": "off",
     "no-use-before-define": "off",
     "consistent-return": "off",
+    "no-alert": "off",
   },
   plugins: ["jest"],
 };

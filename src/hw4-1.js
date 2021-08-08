@@ -6,9 +6,9 @@ export function sumSymbols(a, b) {
   return a.length + b.length;
 }
 
-export function sumDigitNumber(a) {
-  return a
-    .toString()
+export function sumDigitNumber() {
+  const number = prompt("Введите трехзначное число");
+  return number
     .split("")
     .map(Number)
     .reduce((acc, cur) => acc + cur);

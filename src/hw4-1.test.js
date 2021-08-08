@@ -14,6 +14,7 @@ describe("sumSymbols", () => {
 
 describe("sumDigitNumber", () => {
   it("should work correct", () => {
-    expect(sumDigitNumber(345)).toBe(12);
+    jest.spyOn(window, "prompt").mockImplementation(() => "456");
+    expect(sumDigitNumber()).toBe(15);
   });
 });
